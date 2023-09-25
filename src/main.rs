@@ -1,5 +1,6 @@
 use regex::Regex;
 use std::error::Error;
+use std::io;
 
 // Function to extract the YouTube video ID from a URL
 fn extract_video_id(url: &str) -> Option<String> {
@@ -12,11 +13,16 @@ fn extract_video_id(url: &str) -> Option<String> {
 }
 
 fn main() -> Result<(), Box<dyn Error>> {
-    // Replace with your YouTube URL
-    let youtube_url = "https://www.youtube.com/watch?v=YOUR_VIDEO_ID";
+    // Prompt the user to enter a YouTube URL
+    println!("Enter a YouTube URL:");
+    let mut youtube_url = String::new();
+    io::stdin().read_line(&mut youtube_url)?;
+
+    // Trim leading/trailing whitespace and newline characters
+    let youtube_url = youtube_url.trim();
 
     // Extract the video ID from the URL
-    if let Some(video_id) = extract_video_id(youtube_url) {
+    if let Some(video_id) = extract_video_id(&youtube_url) {
         // Construct the piped.link
         let piped_link = format!("https://piped.video/v/{}", video_id);
 
