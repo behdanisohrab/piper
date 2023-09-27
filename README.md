@@ -10,7 +10,11 @@ Convert any youtube watch link to Piped !
 [GPL-3](https://choosealicense.com/licenses/gpl-3.0/)
 
 
+## Preview
 
+Thanks to [BrPrS](https://github.com/BrPrS) now piper has GUI.
+
+![piper preview](https://github.com/behdanisohrab/piper/blob/main/screenshot/piper.gif)
 
 ## Build
 
