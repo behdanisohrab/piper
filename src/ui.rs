@@ -1,6 +1,5 @@
 use eframe::egui;
 use egui::{Vec2, FontId, FontFamily, TextStyle};
-use std::process::{Child};
 use crate::utils::export_piper_link;
 
 pub(crate) async fn run_gui(){
@@ -12,13 +11,13 @@ pub(crate) async fn run_gui(){
         icon_data: None,
         initial_window_pos: None,
         initial_window_size: Option::from(
-            Vec2::new(500 as f32, 150.0)
+            Vec2::new(500_f32, 150.0)
         ),
         min_window_size: Option::from(
-            Vec2::new(500 as f32, 150.0)
+            Vec2::new(500_f32, 150.0)
         ),
         max_window_size: Option::from(
-            Vec2::new(500 as f32, 150.0)
+            Vec2::new(500_f32, 150.0)
         ),
         resizable: false,
         transparent: false,
